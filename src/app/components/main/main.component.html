@@ -1,0 +1,14 @@
+<div>
+  <h2>Всего вопросов: {{ dataLength }}</h2>
+  <input type="text" #quantityOfQuestions />
+  <button (click)="generateQuestion(quantityOfQuestions.value)">
+    Generate
+  </button>
+  <div>
+    <h3 *ngFor="let question of questions">
+      {{ question }}
+      <hr />
+    </h3>
+    <img *ngFor="let img of imageLink" src="{{ img }}" alt="" />
+  </div>
+</div>
